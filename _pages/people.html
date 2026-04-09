@@ -37,7 +37,10 @@ author_profile: true
       display: flex;
       flex-direction: column;
       align-items: center;
-      min-height: 276px;
+    }
+
+    .people-card.alumni-card {
+      min-height: 286px;
     }
 
     .people-photo-wrap {
@@ -65,8 +68,7 @@ author_profile: true
       font-weight: 700;
       color: #111827;
       line-height: 1.25;
-      margin-top: 0;
-      margin-bottom: 1px;
+      margin: 0 0 3px 0;
     }
 
     .people-name-zh {
@@ -75,9 +77,8 @@ author_profile: true
       font-size: 0.92rem;
       font-weight: 500;
       color: #6b7280;
-      line-height: 1.2;
-      margin-top: 0;
-      margin-bottom: 5px;
+      line-height: 1.25;
+      margin: 0 0 6px 0;
     }
 
     .people-info {
@@ -86,7 +87,7 @@ author_profile: true
       font-size: 0.9rem;
       color: #4b5563;
       line-height: 1.5;
-      min-height: 2.8em;
+      margin: 0;
     }
 
     .people-info.alumni {
@@ -103,10 +104,6 @@ author_profile: true
         gap: 14px 14px;
       }
 
-      .people-card {
-        min-height: 258px;
-      }
-
       .people-photo-wrap {
         width: 138px;
         height: 138px;
@@ -120,6 +117,10 @@ author_profile: true
 
       .people-section-title {
         font-size: 1.14rem;
+      }
+
+      .people-card.alumni-card {
+        min-height: 270px;
       }
     }
   </style>
@@ -143,7 +144,7 @@ author_profile: true
     <div class="people-grid">
       <div class="people-card">
         <div class="people-photo-wrap">
-          <img class="people-photo" src="/images/people/wangmeng.jpg" alt="Postdoctoral Researcher">
+          <img class="people-photo" src="/images/people/wangmeng.jpg" alt="Meng Wang">
         </div>
         <div class="people-name-en">Meng Wang</div>
         <div class="people-name-zh">王萌</div>
@@ -270,7 +271,7 @@ author_profile: true
   <div class="people-section">
     <div class="people-section-title">Alumni</div>
     <div class="people-grid">
-      <div class="people-card">
+      <div class="people-card alumni-card">
         <div class="people-photo-wrap"><img class="people-photo" src="/images/people/hexiaolin.jpg" alt="Xiaolin He"></div>
         <div class="people-name-en">Xiaolin He</div>
         <div class="people-name-zh">何孝林</div>
@@ -280,7 +281,7 @@ author_profile: true
         </div>
       </div>
 
-      <div class="people-card">
+      <div class="people-card alumni-card">
         <div class="people-photo-wrap"><img class="people-photo" src="/images/people/longdandan.jpg" alt="Dandan Long"></div>
         <div class="people-name-en">Dandan Long</div>
         <div class="people-name-zh">龙丹丹</div>
@@ -290,7 +291,7 @@ author_profile: true
         </div>
       </div>
 
-      <div class="people-card">
+      <div class="people-card alumni-card">
         <div class="people-photo-wrap"><img class="people-photo" src="/images/people/hanyiming.jpg" alt="Yiming Han"></div>
         <div class="people-name-en">Yiming Han</div>
         <div class="people-name-zh">韩宜鸣</div>
@@ -300,7 +301,7 @@ author_profile: true
         </div>
       </div>
 
-      <div class="people-card">
+      <div class="people-card alumni-card">
         <div class="people-photo-wrap"><img class="people-photo" src="/images/people/caizhaoxing.jpg" alt="Zhaoxing Cai"></div>
         <div class="people-name-en">Zhaoxing Cai</div>
         <div class="people-name-zh">蔡赵兴</div>
@@ -310,7 +311,7 @@ author_profile: true
         </div>
       </div>
 
-      <div class="people-card">
+      <div class="people-card alumni-card">
         <div class="people-photo-wrap"><img class="people-photo" src="/images/people/chenjunxian.jpg" alt="Junxian Chen"></div>
         <div class="people-name-en">Junxian Chen</div>
         <div class="people-name-zh">陈俊先</div>
