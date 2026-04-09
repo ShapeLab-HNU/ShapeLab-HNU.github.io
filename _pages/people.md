@@ -1,64 +1,236 @@
 ---
-  <div class="people-grid">
-    <div class="people-card">
-      <img class="people-photo" src="/images/people/liruihui.jpg" alt="Ruihui Li">
-      <div class="people-body">
-        <p class="people-name">Ruihui Li</p>
-        <p class="people-meta">Professor</p>
-      </div>
-    </div>
-  </div>
-</section>
+layout: single
+title: "People"
+permalink: /people/
+author_profile: false
+---
 
-<section class="people-section">
-  <h2>Postdoctoral Researcher</h2>
-  <div class="people-grid">
-    <div class="people-card">
-      <img class="people-photo" src="/images/people/postdoc-placeholder.jpg" alt="Postdoctoral Researcher">
-      <div class="people-body">
-        <p class="people-name">Postdoc Name</p>
-        <p class="people-meta">Postdoctoral Researcher</p>
-      </div>
-    </div>
-  </div>
-</section>
+<style>
+.people-container {
+max-width: 1100px;
+margin: auto;
+}
 
-<section class="people-section">
-  <h2>PhD Students</h2>
-  <div class="people-grid">
-    <div class="people-card"><img class="people-photo" src="/images/people/hewenzhe.jpg" alt="Wenzhe He"><div class="people-body"><p class="people-name">Wenzhe He</p><p class="people-meta">PhD Student</p><p class="people-note">Class of 2025</p></div></div>
-    <div class="people-card"><img class="people-photo" src="/images/people/liusheng.jpg" alt="Sheng Liu"><div class="people-body"><p class="people-name">Sheng Liu</p><p class="people-meta">PhD Student</p><p class="people-note">Class of 2025</p></div></div>
-    <div class="people-card"><img class="people-photo" src="/images/people/zhangshougao.jpg" alt="Shougao Zhang"><div class="people-body"><p class="people-name">Shougao Zhang</p><p class="people-meta">PhD Student</p><p class="people-note">Class of 2025</p></div></div>
-    <div class="people-card"><img class="people-photo" src="/images/people/yangzhixuan.jpg" alt="Zhixuan Yang"><div class="people-body"><p class="people-name">Zhixuan Yang</p><p class="people-meta">PhD Student</p><p class="people-note">Class of 2025</p></div></div>
-    <div class="people-card"><img class="people-photo" src="/images/people/yangdaowu.jpg" alt="Daowu Yang"><div class="people-body"><p class="people-name">Daowu Yang</p><p class="people-meta">PhD Student</p><p class="people-note">Class of 2024</p></div></div>
-    <div class="people-card"><img class="people-photo" src="/images/people/chenwentang.jpg" alt="Wentang Chen"><div class="people-body"><p class="people-name">Wentang Chen</p><p class="people-meta">PhD Student</p><p class="people-note">Class of 2024</p></div></div>
-    <div class="people-card"><img class="people-photo" src="/images/people/chenxiaojun.jpg" alt="Xiaojun Chen"><div class="people-body"><p class="people-name">Xiaojun Chen</p><p class="people-meta">PhD Student</p><p class="people-note">Class of 2023</p></div></div>
-  </div>
-</section>
+.people-section {
+margin-top: 40px;
+}
 
-<section class="people-section">
-  <h2>Master Students</h2>
-  <div class="people-grid">
-    <div class="people-card"><img class="people-photo" src="/images/people/yuhongxia.jpg" alt="Hongxia Yu"><div class="people-body"><p class="people-name">Hongxia Yu</p><p class="people-meta">Master Student</p><p class="people-note">Class of 2025</p></div></div>
-    <div class="people-card"><img class="people-photo" src="/images/people/liudun.jpg" alt="Dun Liu"><div class="people-body"><p class="people-name">Dun Liu</p><p class="people-meta">Master Student</p><p class="people-note">Class of 2025</p></div></div>
-    <div class="people-card"><img class="people-photo" src="/images/people/hulinjun.jpg" alt="Linjun Hu"><div class="people-body"><p class="people-name">Linjun Hu</p><p class="people-meta">Master Student</p><p class="people-note">Class of 2024</p></div></div>
-    <div class="people-card"><img class="people-photo" src="/images/people/wanghongyu.jpg" alt="Hongyu Wang"><div class="people-body"><p class="people-name">Hongyu Wang</p><p class="people-meta">Master Student</p><p class="people-note">Class of 2024</p></div></div>
-    <div class="people-card"><img class="people-photo" src="/images/people/wangxu.jpg" alt="Xu Wang"><div class="people-body"><p class="people-name">Xu Wang</p><p class="people-meta">Master Student</p><p class="people-note">Class of 2023</p></div></div>
-    <div class="people-card"><img class="people-photo" src="/images/people/wujialin.jpg" alt="Jialin Wu"><div class="people-body"><p class="people-name">Jialin Wu</p><p class="people-meta">Master Student</p><p class="people-note">Class of 2023</p></div></div>
-    <div class="people-card"><img class="people-photo" src="/images/people/zhangxiaohao.jpg" alt="Xiaohao Zhang"><div class="people-body"><p class="people-name">Xiaohao Zhang</p><p class="people-meta">Master Student</p><p class="people-note">Class of 2023</p></div></div>
-    <div class="people-card"><img class="people-photo" src="/images/people/zhushiming.jpg" alt="Shiming Zhu"><div class="people-body"><p class="people-name">Shiming Zhu</p><p class="people-meta">Master Student</p><p class="people-note">Class of 2023</p></div></div>
-  </div>
-</section>
+.people-section h2 {
+border-bottom: 2px solid #eee;
+padding-bottom: 8px;
+margin-bottom: 20px;
+}
 
-<section class="people-section">
-  <h2>Alumni</h2>
-  <div class="people-grid">
-    <div class="people-card"><img class="people-photo" src="/images/people/hexiaolin.jpg" alt="Xiaolin He"><div class="people-body"><p class="people-name">Xiaolin He</p><p class="people-meta">Master Student</p><p class="people-note">Class of 2022 · JD.com</p></div></div>
-    <div class="people-card"><img class="people-photo" src="/images/people/longdandan.jpg" alt="Dandan Long"><div class="people-body"><p class="people-name">Dandan Long</p><p class="people-meta">Master Student</p><p class="people-note">Class of 2022 · BYD</p></div></div>
-    <div class="people-card"><img class="people-photo" src="/images/people/hanyiming.jpg" alt="Yiming Han"><div class="people-body"><p class="people-name">Yiming Han</p><p class="people-meta">Master Student</p><p class="people-note">Class of 2022 · Trip.com</p></div></div>
-    <div class="people-card"><img class="people-photo" src="/images/people/caizhaoxing.jpg" alt="Zhaoxing Cai"><div class="people-body"><p class="people-name">Zhaoxing Cai</p><p class="people-meta">Master Student</p><p class="people-note">Class of 2022 · China Construction Bank</p></div></div>
-    <div class="people-card"><img class="people-photo" src="/images/people/chenjunxian.jpg" alt="Junxian Chen"><div class="people-body"><p class="people-name">Junxian Chen</p><p class="people-meta">Master Student</p><p class="people-note">Class of 2021 · Nankai University (PhD)</p></div></div>
-  </div>
-</section>
+.people-grid {
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+gap: 20px;
+}
+
+.people-card {
+text-align: center;
+}
+
+.people-card img {
+width: 150px;
+height: 150px;
+object-fit: cover;
+border-radius: 8px;
+}
+
+.people-name {
+font-weight: bold;
+margin-top: 8px;
+}
+
+.people-info {
+font-size: 14px;
+color: #555;
+}
+</style>
+
+<div class="people-container">
+
+# 团队成员
+
+## 教授
+
+<div class="people-section">
+<div class="people-grid">
+
+<div class="people-card">
+<img src="/images/people/liruihui.jpg">
+<div class="people-name">李瑞辉</div>
+<div class="people-info">教授</div>
+</div>
+
+</div>
+</div>
+
+---
+
+## 博士后
+
+<div class="people-section">
+<div class="people-grid">
+
+<div class="people-card">
+<img src="/images/people/postdoc.jpg">
+<div class="people-name">博士后姓名</div>
+<div class="people-info">博士后</div>
+</div>
+
+</div>
+</div>
+
+---
+
+## 博士生
+
+<div class="people-section">
+<div class="people-grid">
+
+<div class="people-card">
+<img src="/images/people/hewenzhe.jpg">
+<div class="people-name">贺文哲</div>
+<div class="people-info">2025级 博士生</div>
+</div>
+
+<div class="people-card">
+<img src="/images/people/liusheng.jpg">
+<div class="people-name">刘声</div>
+<div class="people-info">2025级 博士生</div>
+</div>
+
+<div class="people-card">
+<img src="/images/people/zhangshougao.jpg">
+<div class="people-name">张守高</div>
+<div class="people-info">2025级 博士生</div>
+</div>
+
+<div class="people-card">
+<img src="/images/people/yangzhixuan.jpg">
+<div class="people-name">阳致煊</div>
+<div class="people-info">2025级 博士生</div>
+</div>
+
+<div class="people-card">
+<img src="/images/people/yangdaowu.jpg">
+<div class="people-name">杨道武</div>
+<div class="people-info">2024级 博士生</div>
+</div>
+
+<div class="people-card">
+<img src="/images/people/chenwentang.jpg">
+<div class="people-name">陈文堂</div>
+<div class="people-info">2024级 博士生</div>
+</div>
+
+<div class="people-card">
+<img src="/images/people/chenxiaojun.jpg">
+<div class="people-name">陈晓军</div>
+<div class="people-info">2023级 博士生</div>
+</div>
+
+</div>
+</div>
+
+---
+
+## 研究生
+
+<div class="people-section">
+<div class="people-grid">
+
+<div class="people-card">
+<img src="/images/people/yuhongxia.jpg">
+<div class="people-name">禹虹霞</div>
+<div class="people-info">2025级 硕士生</div>
+</div>
+
+<div class="people-card">
+<img src="/images/people/liudun.jpg">
+<div class="people-name">刘盾</div>
+<div class="people-info">2025级 硕士生</div>
+</div>
+
+<div class="people-card">
+<img src="/images/people/hulinjun.jpg">
+<div class="people-name">胡林君</div>
+<div class="people-info">2024级 硕士生</div>
+</div>
+
+<div class="people-card">
+<img src="/images/people/wanghongyu.jpg">
+<div class="people-name">王鸿裕</div>
+<div class="people-info">2024级 硕士生</div>
+</div>
+
+<div class="people-card">
+<img src="/images/people/wangxu.jpg">
+<div class="people-name">王旭</div>
+<div class="people-info">2023级 硕士生</div>
+</div>
+
+<div class="people-card">
+<img src="/images/people/wujialin.jpg">
+<div class="people-name">吴佳霖</div>
+<div class="people-info">2023级 硕士生</div>
+</div>
+
+<div class="people-card">
+<img src="/images/people/zhangxiaohao.jpg">
+<div class="people-name">张晓豪</div>
+<div class="people-info">2023级 硕士生</div>
+</div>
+
+<div class="people-card">
+<img src="/images/people/zhushiming.jpg">
+<div class="people-name">朱世明</div>
+<div class="people-info">2023级 硕士生</div>
+</div>
+
+</div>
+</div>
+
+---
+
+## 毕业生
+
+<div class="people-section">
+<div class="people-grid">
+
+<div class="people-card">
+<img src="/images/people/hexiaolin.jpg">
+<div class="people-name">何孝林</div>
+<div class="people-info">2022级 · 京东</div>
+</div>
+
+<div class="people-card">
+<img src="/images/people/longdandan.jpg">
+<div class="people-name">龙丹丹</div>
+<div class="people-info">2022级 · 比亚迪</div>
+</div>
+
+<div class="people-card">
+<img src="/images/people/hanyiming.jpg">
+<div class="people-name">韩宜鸣</div>
+<div class="people-info">2022级 · 携程</div>
+</div>
+
+<div class="people-card">
+<img src="/images/people/caizhaoxing.jpg">
+<div class="people-name">蔡赵兴</div>
+<div class="people-info">2022级 · 建设银行</div>
+</div>
+
+<div class="people-card">
+<img src="/images/people/chenjunxian.jpg">
+<div class="people-name">陈俊先</div>
+<div class="people-info">2021级 · 南开大学读博</div>
+</div>
+
+</div>
+</div>
 
 </div>
