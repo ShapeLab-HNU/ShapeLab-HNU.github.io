@@ -11,26 +11,91 @@ author_profile: true
 
 {% include base_path %}
 
-<!-- New style rendering if publication categories are defined -->
-{% if site.publication_category %}
-  {% for category in site.publication_category  %}
-    {% assign title_shown = false %}
-    {% for post in site.publications reversed %}
-      {% if post.category != category[0] %}
-        {% continue %}
+<style>
+  .pub-year-divider {
+    text-align: center;
+    margin: 30px 0 20px 0;
+    border-top: 2px dashed #aaa;
+    position: relative;
+  }
+  .pub-year-divider span {
+    background: #fff;
+    padding: 0 20px;
+    position: relative;
+    top: -12px;
+    font-size: 1em;
+    color: #555;
+    font-weight: bold;
+  }
+  .pub-list {
+    list-style: none;
+    padding-left: 0;
+  }
+  .pub-list li {
+    margin-bottom: 12px;
+    font-size: 1em;
+    line-height: 1.6;
+  }
+  .pub-badge {
+    color: #e67e22;
+    font-weight: bold;
+    margin-right: 6px;
+  }
+</style>
+
+{% assign sorted_pubs = site.publications | sort: "date" | reverse %}
+{% assign year_groups = "2026,2025,2024,Before" | split: "," %}
+
+{% for year_label in year_groups %}
+  {% assign has_pubs = false %}
+  {% for post in sorted_pubs %}
+    {% assign pub_year = post.date | date: "%Y" | plus: 0 %}
+    {% if year_label == "Before" %}
+      {% if pub_year < 2024 %}
+        {% assign has_pubs = true %}
+        {% break %}
       {% endif %}
-      {% unless title_shown %}
-        <h2>{{ category[1].title }}</h2><hr />
-        {% assign title_shown = true %}
-      {% endunless %}
-      {% include archive-single.html %}
+    {% else %}
+      {% assign target_year = year_label | plus: 0 %}
+      {% if pub_year == target_year %}
+        {% assign has_pubs = true %}
+        {% break %}
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+
+  {% if has_pubs %}
+    <div class="pub-year-divider">
+      <span>{{ year_label }}</span>
+    </div>
+    <ul class="pub-list">
+    {% for post in sorted_pubs %}
+      {% assign pub_year = post.date | date: "%Y" | plus: 0 %}
+      {% assign show = false %}
+      {% if year_label == "Before" %}
+        {% if pub_year < 2024 %}
+          {% assign show = true %}
+        {% endif %}
+      {% else %}
+        {% assign target_year = year_label | plus: 0 %}
+        {% if pub_year == target_year %}
+          {% assign show = true %}
+        {% endif %}
+      {% endif %}
+
+      {% if show %}
+        {% assign clean_excerpt = post.excerpt | strip_html | strip %}
+        {% assign badge = "" %}
+        {% if clean_excerpt contains "【" %}
+          {% assign parts = clean_excerpt | split: "】" %}
+          {% assign badge_raw = parts[0] | split: "【" %}
+          {% assign badge = badge_raw[1] %}
+        {% endif %}
+        <li>
+          {% if badge != "" %}<span class="pub-badge">【{{ badge }}】</span>{% endif %}{{ post.title }}. {{ post.venue }}.
+        </li>
+      {% endif %}
     {% endfor %}
-  {% endfor %}
-{% else %}
-  {% for post in site.publications reversed %}
-    {% include archive-single.html %}
-  {% endfor %}
-{% endif %}
-
-
-
+    </ul>
+  {% endif %}
+{% endfor %}
